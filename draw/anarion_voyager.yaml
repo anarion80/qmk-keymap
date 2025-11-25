@@ -1,0 +1,233 @@
+layout: { qmk_keyboard: zsa/voyager, layout_name: LAYOUT }
+layers:
+  BASE:
+    - { t: "=", s: + }
+    - { t: "1", s: "!" }
+    - { t: "2", s: "@" }
+    - { t: "3", s: "#" }
+    - { t: "4", s: $ }
+    - { t: "5", s: "%" }
+    - { t: "6", s: ^ }
+    - { t: "7", s: "&" }
+    - { t: "8", s: "*" }
+    - { t: "9", s: ( }
+    - { t: "0", s: ) }
+    - { t: "-", s: _ }
+    - [$$mdi:keyboard-tab$$, Q, W, E, R, T, Y, U, I, O, P, { t: \, s: "|" }]
+    - [
+        $$mdi:keyboard-esc$$,
+        { t: A, h: "$$mdi:apple-keyboard-control$$" },
+        { t: S, h: ⎇ },
+        { t: D, h: "$$mdi:microsoft-windows$$" },
+        { t: F, h: "$$mdi:apple-keyboard-shift$$" },
+        { t: G, h: "$$mdi:dialpad$$" },
+        H,
+        { t: J, h: "$$mdi:apple-keyboard-shift$$" },
+        { t: K, h: "$$mdi:microsoft-windows$$" },
+        { t: L, h: ⎇ },
+        { t: ;, h: "$$mdi:apple-keyboard-control$$", s: ":" },
+        { t: "'", s: '"' },
+      ]
+    - [
+        NAV,
+        Z,
+        X,
+        C,
+        V,
+        { t: B, h: "$$mdi:mouse$$" },
+        N,
+        M,
+        { t: ",", s: < },
+        { t: ., s: ">" },
+        { t: /, s: "?" },
+        NAV,
+      ]
+    - [
+        { t: "$$mdi:keyboard-space$$", h: NAV },
+        $$mdi:backspace$$,
+        { t: "$$mdi:backspace-reverse-outline$$", h: AltGr },
+        { t: "$$mdi:keyboard-return$$", h: "$$mdi:apple-keyboard-shift$$" },
+      ]
+  NAV:
+    - - F1
+      - F2
+      - F3
+      - F4
+      - F5
+      - F6
+      - F7
+      - F8
+      - F9
+      - F10
+      - F11
+      - F12
+    - - { t: ▽, type: trans }
+      - $$mdi:tab-minus$$
+      - $$mdi:tab-plus$$
+      - $$mdi:swap-horizontal$$
+      - $$mdi:keyboard-tab-reverse$$
+      - { t: ▽, type: trans }
+      - INS
+      - $$mdi:page-first$$
+      - { t: "$$mdi:arrow-up-bold$$", h: "$$mdi:triangle-small-up$$" }
+      - { t: ▽, type: trans }
+      - $$mdi:page-previous-outline$$
+      - { t: ▽, type: trans }
+    - - "`"
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - $$mdi:close-box$$
+      - $$mdi:alpha-w-box$$
+      - { t: "$$mdi:arrow-left-bold$$", h: "$$mdi:page-first$$" }
+      - { t: "$$mdi:arrow-down-bold$$", h: "$$mdi:triangle-small-down$$" }
+      - { t: "$$mdi:arrow-right-bold$$", h: "$$mdi:page-last$$" }
+      - { t: $$mdi:backspace$$ }
+      - { t: ▽, type: trans }
+    - - { t: ▽, type: trans }
+      - $$mdi:undo$$
+      - $$mdi:content-cut$$
+      - $$mdi:content-copy$$
+      - $$mdi:content-paste$$
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - $$mdi:page-last$$
+      - { t: "[", s: "{" }
+      - { t: "]", s: "}" }
+      - $$mdi:page-next-outline$$
+      - { t: ▽, type: trans }
+    - - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - "$$mdi:keyboard-return$$"
+  NUM:
+    - - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - NUM LOCK
+      - "+"
+      - "="
+      - "*"
+      - "/"
+      - "-"
+    - - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - 7
+      - 8
+      - 9
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+    - - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - 4
+      - 5
+      - 6
+      - "$$mdi:keyboard-return$$"
+      - { t: ▽, type: trans }
+    - - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - 1
+      - 2
+      - 3
+      - "$$mdi:keyboard-return$$"
+      - $$mdi:apple-keyboard-shift$$
+    - - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+    - [$$mdi:backspace$$, 0]
+  MOUSE:
+    - - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - "$$mdi:select-all$$"
+      - "$$mdi:select-arrow-down$$"
+      - "$$mdi:select-arrow-up$$"
+      - "$$mdi:rotate-orbit$$"
+      - "$$mdi:led-strip$$"
+      - { t: ▽, type: trans }
+    - - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - "$$mdi:pan-up$$"
+      - "$$mdi:arrow-up-thin$$"
+      - "$$mdi:pan-down$$"
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+    - - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - "$$mdi:arrow-left-thin$$"
+      - "$$mdi:arrow-down-thin$$"
+      - "$$mdi:arrow-right-thin$$"
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+    - - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+      - "$$mdi:pan-left$$"
+      - "$$mdi:mouse-scroll-wheel$$"
+      - "$$mdi:pan-right$$"
+      - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+    - - { t: ▽, type: trans }
+      - { t: ▽, type: trans }
+    - [$$mdi:mouse-right-click$$, $$mdi:mouse-left-click$$]
+  "TAP ONLY":
+    - ["=", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "-"]
+    - [TAB, Q, W, E, R, T, Y, U, I, O, P, \]
+    - [ESC, A, S, D, F, G, H, J, K, L, ";", "'"]
+    - [
+        "$$mdi:apple-keyboard-shift$$",
+        Z,
+        X,
+        C,
+        V,
+        B,
+        N,
+        M,
+        ",",
+        .,
+        /,
+        "$$mdi:apple-keyboard-shift$$",
+      ]
+    - [
+        "$$mdi:keyboard-space$$",
+        $$mdi:backspace$$,
+        "$$mdi:backspace-reverse-outline$$",
+        "$$mdi:keyboard-return$$",
+      ]
+combos:
+  - { p: [5, 6], k: TAP_ONLY, a: top, o: 0.5, l: [BASE, "TAP ONLY"] }

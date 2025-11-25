@@ -1,0 +1,9 @@
+{
+  "modules": [
+    "getreuer/lumino",
+    "getreuer/palettefx",
+    "getreuer/select_word",
+    "getreuer/sentence_case",
+    "getreuer/custom_shift_keys"
+  ]
+}
