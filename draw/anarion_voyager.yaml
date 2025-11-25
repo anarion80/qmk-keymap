@@ -44,8 +44,8 @@ layers:
       ]
     - [
         { t: "$$mdi:keyboard-space$$", h: NAV },
-        $$mdi:backspace$$,
-        { t: "$$mdi:backspace-reverse-outline$$", h: AltGr },
+        { t: "$$mdi:backspace$$", h: AltGr },
+        { t: "$$mdi:backspace-reverse-outline$$" },
         { t: "$$mdi:keyboard-return$$", h: "$$mdi:apple-keyboard-shift$$" },
       ]
   NAV:

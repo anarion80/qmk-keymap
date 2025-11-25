@@ -94,7 +94,7 @@ enum keycode_aliases {
   WIN_CUT = LCTL(KC_X),
   WIN_COPY = S(C(KC_C)),
   WIN_PASTE = S(C(KC_V)),
-  DEL_RALT = RALT_T(KC_DEL)
+  BSPC_RALT = RALT_T(KC_BSPC)
 };
 
 static bool isMacOS = false;
@@ -124,13 +124,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                      KC_TAB , KC_Q   , KC_W   , KC_E   , KC_R   , KC_T   ,
                      KC_ESC, HRM_A  , HRM_S  , HRM_D  , HRM_F  , HRM_G   ,
                      MO(NAV), KC_Z  , KC_X   , KC_C   , KC_V  , HRM_B   ,
-                                                               SPC_NAV, KC_BSPC ,
+                                                               SPC_NAV, BSPC_RALT ,
 
                      KC_6   , KC_7   , KC_8   , KC_9   , KC_0   , KC_MINS,
                      KC_Y   , KC_U   , KC_I   , KC_O   , KC_P   , KC_BACKSLASH, 
                      KC_H   , HRM_J  , HRM_K  , HRM_L  , HRM_SEMI  , KC_QUOT,
                      KC_N   , KC_M  , KC_COMMA  , KC_DOT  , KC_SLSH, MO(NAV) ,
-                                                                DEL_RALT , ENT_SHFT
+                                                                KC_DEL , ENT_SHFT
                      ),
 
   [NAV] = LAYOUT_LR(  // Navigation layer.
@@ -290,7 +290,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t* record) {
   switch (keycode) {
     case ENT_SHFT:
     case SPC_NAV:
-    case DEL_RALT:
+    case BSPC_RALT:
       return TAPPING_TERM - 35;
     default:
       return TAPPING_TERM;
@@ -303,7 +303,7 @@ bool get_hold_on_other_key_press(uint16_t keycode, keyrecord_t* record) {
   switch (keycode) {
     case ENT_SHFT:
     case SPC_NAV:
-    case DEL_RALT:
+    case BSPC_RALT:
       // Immediately select the hold action when another key is pressed.
       return true;
     default:
@@ -333,7 +333,7 @@ bool get_permissive_hold(uint16_t keycode, keyrecord_t* record) {
   switch (keycode) {
     case ENT_SHFT:
     case SPC_NAV:
-    case DEL_RALT:
+    case BSPC_RALT:
       // Immediately select the hold action when another key is tapped.
       return true;
     default:
@@ -369,7 +369,7 @@ bool get_chordal_hold(uint16_t tap_hold_keycode, keyrecord_t* tap_hold_record,
   switch (tap_hold_keycode) {
     case ENT_SHFT:
     case SPC_NAV:
-    case DEL_RALT:
+    case BSPC_RALT:
       return true;
 
     case HRM_A:
